@@ -17,10 +17,10 @@ services:
       - "5212:5212"
     volumes:
       - temp_data:/data
-      - ./root/cloudreve/uploads:/cloudreve/uploads
-      - ./root/cloudreve/conf.ini:/cloudreve/conf.ini
-      - ./root/cloudreve/cloudreve.db:/cloudreve/cloudreve.db
-      - ./root/cloudreve/avatar:/cloudreve/avatar
+      - ./data/coolify/applications/e8gok444g8s0c4s48oogk088/cloudreve/uploads:/cloudreve/uploads
+      - ./data/coolify/applications/e8gok444g8s0c4s48oogk088/cloudreve/conf.ini:/cloudreve/conf.ini
+      - ./data/coolify/applications/e8gok444g8s0c4s48oogk088/cloudreve/cloudreve.db:/cloudreve/cloudreve.db
+      - ./data/coolify/applications/e8gok444g8s0c4s48oogk088/cloudreve/avatar:/cloudreve/avatar
     depends_on:
       - aria2
 
