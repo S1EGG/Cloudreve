@@ -17,10 +17,10 @@ services:
       - "5212:5212"
     volumes:
       - temp_data:/data
-      - ./data/coolify/applications/e8gok444g8s0c4s48oogk088/cloudreve/uploads:/cloudreve/uploads
-      - ./data/coolify/applications/e8gok444g8s0c4s48oogk088/cloudreve/conf.ini:/cloudreve/conf.ini
-      - ./data/coolify/applications/e8gok444g8s0c4s48oogk088/cloudreve/cloudreve.db:/cloudreve/cloudreve.db
-      - ./data/coolify/applications/e8gok444g8s0c4s48oogk088/cloudreve/avatar:/cloudreve/avatar
+      - /root/cloudreve/cloudreve/conf.ini:/cloudreve/conf.ini  # 宿主机文件 -> 容器文件
+      - /root/cloudreve/cloudreve/uploads:/cloudreve/uploads    # 目录 -> 目录
+      - /root/cloudreve/cloudreve/cloudreve.db:/cloudreve/cloudreve.db
+      - /root/cloudreve/cloudreve/avatar:/cloudreve/avatar
     depends_on:
       - aria2
 
