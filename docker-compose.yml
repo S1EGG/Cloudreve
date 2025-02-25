@@ -17,10 +17,10 @@ services:
       - "5212:5212"
     volumes:
       - temp_data:/data
-      - ./cloudreve/uploads:/cloudreve/uploads
-      - ./cloudreve/conf.ini:/cloudreve/conf.ini
-      - ./cloudreve/cloudreve.db:/cloudreve/cloudreve.db
-      - ./cloudreve/avatar:/cloudreve/avatar
+      - ./root/cloudreve/uploads:/cloudreve/uploads
+      - ./root/cloudreve/conf.ini:/cloudreve/conf.ini
+      - ./root/cloudreve/cloudreve.db:/cloudreve/cloudreve.db
+      - ./root/cloudreve/avatar:/cloudreve/avatar
     depends_on:
       - aria2
 
@@ -32,7 +32,7 @@ services:
       - RPC_SECRET=your_aria_rpc_token # aria rpc token, customize your own
       - RPC_PORT=6800
     volumes:
-      - ./aria2/config:/config
+      - ./root/aria2/config:/config
       - temp_data:/data
 volumes:
   redis_data:
